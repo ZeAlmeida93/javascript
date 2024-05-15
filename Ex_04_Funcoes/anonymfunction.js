@@ -120,4 +120,35 @@ function dividir2(numero) {
   divisao30(10);
   divisao30(5);
 
-  
+  // FUNÇÔES CONSTRUTORAS
+
+  function Livro(titulo, autor){
+  this.titulo = titulo;
+  this.autor = autor;
+
+  }
+
+  const Livro1 = new Livro('O Conde de Monte Cristo' , 'Alexandre Dumas');
+  const Livro2 = new Livro('A Cidade e a Serra' , 'Eça de Queiroz');  /*So Far so Good */
+
+  console.log (Livro1.autor, Livro1.titulo , Livro2.titulo, Livro2.autor);
+
+  Livro1.titulo = 'Zé Diogo Quintela'; /* Bem MAIS SIMPLES DO QUE ESTAVAS A TENTAR FAZER Ó ZÉ  - Usas isto para alterar o titulo de algum dos livros */
+
+ 
+ 
+ 
+  function alterarnome() {
+
+const Livro1 = new Livro ('Os Três Mosqueteiros' , 'Alexandre Dumas');
+
+
+  }
+
+
+let Colecao = Array [Livro1 , Livro2];
+
+console.log(Colecao);
+console.log(Livro1);
+
+
