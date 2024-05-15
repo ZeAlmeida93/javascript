@@ -67,6 +67,7 @@ calcularIVA(22)(200);
 calcularIVA(22)(200);
 calcularIVA(22)(1000);
 
+
 // Exercício Closures 1
 
 function divisao(dividendo) {
@@ -77,7 +78,7 @@ function divisao(dividendo) {
 }
 
 
-console.log(divisao(40)(2));
+console.log(divisao(430)(2));
 
 
 // Exercício Closures 2
