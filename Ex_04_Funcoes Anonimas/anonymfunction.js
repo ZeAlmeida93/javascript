@@ -77,6 +77,8 @@ function divisao(dividendo) {
 
 }
 
+console.log(divisao(25)());
+
 
 console.log(divisao(430)(2));
 
@@ -92,4 +94,30 @@ function divisao(dividendo) {
   
   
   console.log(divisao(20)(2));
+  
+
+//   Exemplo do VITOR
+
+function dividir2(numero) {
+    return function () {
+      return numero / 2;
+    };
+  }
+  
+  dividir2(10)();
+  const divisao2 = dividir2(20);
+  divisao2();
+  
+  function divisao(primeiro) {
+    return function (segundo) {
+      return primeiro / segundo;
+    };
+  }
+  
+  divisao(10)(5);
+  
+  const divisao30 = divisao(30);
+  divisao30(10);
+  divisao30(5);
+
   
