@@ -14,9 +14,12 @@
 
 //  Criação de uma array com os países
 
-const countries = ['Albânia','Bolívia','Canadá','Dinamarca','Etiópia','Finlândia','Alemanha','Hungria','Irlanda','Japão','Quênia'];
+let countries = ['Albânia','Bolívia','Canadá','Dinamarca','Etiópia','Finlândia','Alemanha','Hungria','Irlanda','Japão','Quênia'];
 
+// Adicionar Portugal no inicio com o unshift e a espanha no fim com o push
 
+countries.unshift('Portugal');
+countries.push('Espanha');
 
 // Ciclo for para fazer console.log de cada um dos países 
 
@@ -32,7 +35,28 @@ for (let selector = 0; selector < countries.length; selector++) { /* Nãp esquec
             console.log(countries[selector]);
         }
 
-// 
+// Cria uma função que devolve o número de itens do paises
+
+function countrycounter(array) {
+
+return array.lenght;
+
+} 
+
+// Ultimos 3 paises usando o slice
+
+//  function last3countries(array) { /* ESQUECER ISTO */
+
+console.log(countries.slice(countries.length - 3));
+
+
+// }
+
+// JOIN
+
+console.log(countries.join(' - '));
+
+
 
 
 
