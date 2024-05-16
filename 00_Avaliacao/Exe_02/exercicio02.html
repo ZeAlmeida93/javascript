@@ -9,15 +9,25 @@
 
  <script>
 
-function calculo ( preco , desconto)  {
 
-if (desconto === 0) {
 
-    return preco * 2;
+function calculador ( preco , desconto)  {
+
+if (desconto < 10 ) { /* Se for menor que 10% */
+
+    return preco + (preco * desconto / 100); /* Aqui retorna o valor mais desconto */
+}
+
+else if (desconto >= 10) { /* Se for aqui maior ou igual que 10% */
+
+    return preco - (preco * desconto / 100); /* Retorna aqui o preco menos o desconto */
+}
 
 }
 
+//  É ISTO NÃO É VITOR?
 
+console.log(calculador(10 , 35));
 
 
 
