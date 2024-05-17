@@ -156,7 +156,7 @@ console.log(Livro1);
 // Teste - Arrays com arrow functions -Funcções Anónimas!!
 
 
-const palavras = ['primeira', ' segunda' , 'terceira'];
+const palavras = ['primeira', ' segunda' , 'terceira' , 'ed'];
 
 // const palavrasMaiusculas = palavras.map((palavra) => console.log(palavra));
 
@@ -173,3 +173,60 @@ for (let i = 0; i < palavras.length; i++) {
 // FOR EACH
 
 palavras.forEach((palavra) => console.log(palavra));
+
+const maiusculas = [];
+
+palavras.forEach((palavra) => {
+
+  if (palavra.length > 3) {
+
+maiusculas.push(palavra);
+
+
+  }
+
+
+
+
+});
+
+// FILTER
+
+const filtrarPalavras = palavras.filter((palavra) => palavra.length > 3);
+
+// Reduce
+
+const palavras = ["primeira", "a", "terco"];
+
+const resultadoFinal = palavras.reduce(
+  (resultado, palavra) => resultado + " " + palavra,
+  "Começa assim:"
+);
+
+const carrinhoCompras = [
+  {
+    nome: "A",
+    preco: 10.9,
+  },
+  {
+    nome: "B",
+    preco: 9.9,
+  },
+  {
+    nome: "C",
+    preco: 19.8,
+  },
+  {
+    nome: "D",
+    preco: 209.9,
+  },
+];
+
+let totalCarrinhoCompras = 0;
+carrinhoCompras.forEach((produto) => (total += produto.preco));
+
+const totalCarrinhoCompras2 = carrinhoCompras.reduce(
+  (total, produto) => (total += produto.preco),
+  0
+);
+
