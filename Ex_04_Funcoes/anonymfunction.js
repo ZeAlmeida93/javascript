@@ -169,3 +169,7 @@ for (let i = 0; i < palavras.length; i++) {
 
   palavrasMaiusculas2.push(palavras[i].toUpperCase());
 }
+
+// FOR EACH
+
+palavras.forEach((palavra) => console.log(palavra));
