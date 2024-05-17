@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício ES6</title>
+</head>
+<body>
+
+    <script>
+
+
+// Considerar este array
+
+var estudantes = [
+    
+{ id: 1, nome: 'João', idade: 20 },
+{ id: 2, nome: 'Maria', idade: 22 },
+{ id: 3, nome: 'Pedro', idade: 18 },
+{ id: 4, nome: 'Ana', idade: 21 }
+
+];
+
+//  Ora bem vamos pensar lá no assunto - 
+
+var [a, b , c , d] = estudantes;
+
+const alunoID = estudantes.find((estudante) => estudante.id);
+
+//  let a = estudantes.id;
+// alunoID(2);
+
+
+
+// Aqui vamos ler a partir de um forEach cada um dos objectos e depois 
+
+const LerEstudantes = estudantes.forEach((estudante) => console.log(estudante));
+const appendEstudantes = estudantes.find((estudante) => (estudante));
+
+
+
+
+const NomedeEstudante = estudantes.reduce(
+  (estudante, id) => (estudante += id),
+  2
+);
+
+
+
+    </script>
+    
+</body>
+</html>
