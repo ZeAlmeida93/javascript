@@ -196,12 +196,6 @@ const filtrarPalavras = palavras.filter((palavra) => palavra.length > 3);
 
 // Reduce
 
-const palavras = ["primeira", "a", "terco"];
-
-const resultadoFinal = palavras.reduce(
-  (resultado, palavra) => resultado + " " + palavra,
-  "Começa assim:"
-);
 
 const carrinhoCompras = [
   {
