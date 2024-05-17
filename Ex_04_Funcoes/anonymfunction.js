@@ -152,3 +152,20 @@ console.log(Colecao);
 console.log(Livro1);
 
 
+
+// Teste - Arrays com arrow functions
+
+
+const palavras = ['primeira', ' segunda' , 'terceira'];
+
+// const palavrasMaiusculas = palavras.map((palavra) => console.log(palavra));
+
+const palavrasMaiusculas = palavras.map((palavra) => palavra.toUpperCase()); 
+
+// Aqui faz exactamente a mesma coisa -> que o que se fez em cima
+
+const palavrasMaiusculas2 = [];
+for (let i = 0; i < palavras.length; i++) {
+
+  palavrasMaiusculas2.push(palavras[i].toUpperCase());
+}
