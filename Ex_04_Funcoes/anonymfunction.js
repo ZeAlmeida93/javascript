@@ -153,7 +153,7 @@ console.log(Livro1);
 
 
 
-// Teste - Arrays com arrow functions
+// Teste - Arrays com arrow functions -Funcções Anónimas!!
 
 
 const palavras = ['primeira', ' segunda' , 'terceira'];
