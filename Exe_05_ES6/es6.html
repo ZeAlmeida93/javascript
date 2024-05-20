@@ -52,6 +52,26 @@ const NomedeEstudante = estudantes.reduce(
 
 
 
+var estudantes = [
+  { id: 1, nome: "João", idade: 20 },
+  { id: 2, nome: "Maria", idade: 22 },
+  { id: 3, nome: "Pedro", idade: 18 },
+  { id: 4, nome: "Ana", idade: 21 },
+];
+
+const encontrarAlunoId = (id = 0) =>
+  estudantes.find((estudante) => estudante.id === id);
+
+const estudantesNomes = () =>
+  estudantes.map((estudante) => `Nome do estudante: ${estudante.nome}`);
+
+estudantes.forEach((estudante) =>
+  console.log(`Nome do estudante: ${estudante.nome}`)
+);
+
+const estudantesIdadeMaior = (idade = 18) =>
+  estudantes.filter((estudante) => estudante.idade > idade);
+
 // Exercicio - Encontrar estudantes pelo ID
 
 
