@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe_01_Promises</title>
+</head>
+<body>
+
+    <script>
+
+const soma = (a, b) => {
+  const total = a + b;
+
+  const promise = new Promise((resolve, reject) => {
+    if (total % 2 == 0) {
+      resolve("é par");
+    } else {
+      reject("é impar");
+    }
+  });
+
+  promise
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+};
+   
+
+
+
+        
+
+/* const promise = new Promise(function soma (resolve, reject) { try {
+resolve('Nice'); } catch (e) {
+reject(e); }
+}); */
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
