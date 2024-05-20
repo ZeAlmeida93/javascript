@@ -25,10 +25,15 @@ var estudantes = [
 
 var [a, b , c , d] = estudantes;
 
-const alunoID = estudantes.find((estudante) => estudante.id);
+//  const alunoID = estudantes.find((estudante) => estudante.id);
 
+const alunoID = (id) => estudantes.find((estudante) => estudante.id === id);
 //  let a = estudantes.id;
 // alunoID(2);
+
+const estudantesNome = () => estudantes.map ((estudante) => `Nome do estudante: ${estudante.nome}`);
+
+
 
 
 
