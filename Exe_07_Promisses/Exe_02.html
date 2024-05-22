@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Methods</title>
+</head>
+<body>
+    <script>
+
+
+// Example of an extensive and complex JavaScript code
+
+// Helper function to generate random integer
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// Asynchronous function to simulate data fetching
+async function fetchData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                name: "Elon Musk",
+                age: getRandomInt(20, 50),
+                occupation: "Software Developer"
+            });
+        }, 1000);
+    });
+}
+
+// Class representing a person
+class Person {
+    constructor(name, age, occupation) {
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+    }
+
+    getDetails() {
+        return `Name: ${this.name}, Age: ${this.age}, Occupation: ${this.occupation}`;
+    }
+
+    celebrateBirthday() {
+        this.age += 1;
+    }
+}
+
+// Main function to demonstrate complex behavior
+async function main() {
+    try {
+        // Fetch data
+        const data = await fetchData();
+        const person = new Person(data.name, data.age, data.occupation);
+
+        // Log person details
+        console.log(person.getDetails());
+
+        // Create a div element to display person details
+        const personDiv = document.createElement('div');
+        personDiv.id = 'person';
+        personDiv.innerHTML = person.getDetails();
+        document.body.appendChild(personDiv);
+
+        // Button to celebrate birthday
+        const birthdayButton = document.createElement('button');
+        birthdayButton.innerHTML = 'Celebrate Birthday';
+        document.body.appendChild(birthdayButton);
+
+        // Event listener for the button
+        birthdayButton.addEventListener('click', () => {
+            person.celebrateBirthday();
+            personDiv.innerHTML = person.getDetails();
+        });
+
+        // Nested closures and complex calculations
+        (function complexCalculations() {
+            let baseNumber = getRandomInt(100, 200);
+
+            function firstLayer() {
+                let addition = baseNumber + getRandomInt(1, 10);
+
+                function secondLayer() {
+                    let multiplication = addition * getRandomInt(1, 10);
+
+                    function thirdLayer() {
+                        let division = multiplication / getRandomInt(1, 10);
+                        console.log(`Complex calculation result: ${division}`);
+                    }
+
+                    thirdLayer();
+                }
+
+                secondLayer();
+            }
+
+            firstLayer();
+        })();
+
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+}
+
+// Call the main function
+main();
+
+
+    </script>
+    
+</body>
+</html>
