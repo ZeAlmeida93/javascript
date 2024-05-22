@@ -9,7 +9,7 @@
 
     <script>
 
-const soma = (a, b) => {
+const soma2 = (a, b) => {
   const total = a + b;
 
   const promise = new Promise((resolve, reject) => {
@@ -26,15 +26,84 @@ const soma = (a, b) => {
 };
    
 
-// 
+// ASYNC FUNCTION
 
+/*
+const soma = new Promise ((resolve,reject) => {
+ 
+    if (total2 % 2 == 0) {
+      resolve("é par");
+    } else {
+      reject("é impar");
+    }
+
+const promise = async() => {
+console.log(resolve , reject);
+};
+
+
+const numpar = async () => {
+  try {
+    const result = await soma2;
+    console.log(resolve); 
+  } catch (error) {
+    console.log(reject); 
+  }
+};
+
+
+        */
 
         
+
+
+/*
+const soma = new Promise((resolve, reject) => {
+  if (total % 2 === 0) {
+    resolve("é par");
+  } else {
+    reject("é impar");
+  }
+});
+
+const numpar = async () => {
+  try {
+    const result = await soma;
+    console.log(result); 
+  } catch (error) {
+    console.log(error); 
+  }
+};
+
+
+numpar();
+
+// EXERCICIO VITOR SOLUÇÃO
+
+
 
 /* const promise = new Promise(function soma (resolve, reject) { try {
 resolve('Nice'); } catch (e) {
 reject(e); }
 }); */
+
+// EXERCICIO ASYNC AWAIT
+
+asyncNome("José");
+asyncNome("javascript")
+
+
+/* const José = new Promise ((resolve, reject) => {
+
+
+
+
+
+
+})
+
+*/
+
 
 
 
