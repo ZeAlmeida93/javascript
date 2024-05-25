@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Functions</title>
+</head>
+<body>
+    <script>
+
+const scale = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+
+function getFifth(note) {
+            const noteIndex = scale.indexOf(note);
+            if (noteIndex === -1) {
+                return "Invalid note";
+            }
+            const fifthIndex = (noteIndex + 7) % scale.length;
+            return scale[fifthIndex];
+        }
+
+
+
+    </script>
+</body>
+</html>
