@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Form-Java Script</title>
+</head>
+<body>
+
+    <!--Evento Click-->
+    <button onclick="ButtonClicked()">VAI CLICAR?</button>
+
+    <!-- Evento Load -->
+    <div onload="Loader()">LOADING?</div>
+
+    <!-- Formulário com eventos -->
+    <form>
+<input onchange="NeverChange()" type="text">
+<button onreset="CallBack()"> Let's Call it Back</button>
+
+
+
+    </form>
+
+   
+   
+   
+   <script>
+
+
+const ButtonClicked = () => console.log("clicando por você <3");
+
+// Const para o evento Load
+const Loader = () => console.log("LOADING DATA!");
+
+
+const NeverChange = () => console.log ("NEVER CHANGE!")
+
+
+const CallBack = () => console.log ("GO BACK!")
+    </script>
+</body>
+</html>

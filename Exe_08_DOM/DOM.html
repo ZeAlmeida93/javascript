@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício da DOM</title>
+</head>
+<body>
+
+    <button type="button">Elementos</button> <p id="teste">Teste</p>
+    <button type="button">Primeiro</button>
+    <div class="container"> <h1><time>00:00:00</time></h1> <button id="start">Start</button> <button id="stop">Stop</button> <button id="reset">Reset</button>
+    </div>
+
+    
+
+    <script>
+
+
+// AO COLOCAR DENTRO DOS PARENTESIS È TUDO STRIIIIINNNGGGS!!!!
+
+const allButtons = document.getElementsByTagName("button");
+console.log(allButtons);
+
+// A primeira abordagem do Selector é desnecessária 
+
+const allButtonsContainer = document.querySelectorAll(".container , #start , #stop , #reset");
+console.log(allButtonsContainer);
+
+// Faz mais sentido assim
+
+const allButtonsContainer2 = document.querySelectorAll(".container button");
+console.log(allButtonsContainer2);
+
+const ParagraphbyID = document.getElementById('teste');
+console.log(ParagraphbyID);
+
+
+// CRIAR ELEMENTOS - Cria um ficheiro html;
+//  Cria uma tag script para o código js;
+//  Cria uma div e adiciona ao body.
+
+const adicionarElemento = () => {
+const novaDiv = document.createElement("div");
+const conteudo = document.createTextNode("Esta frase está a ser criada dinamicamente");
+novaDiv.appendChild(conteudo);
+document.body.appendChild(novaDiv);
+}
+
+const TheDiv = document.createElement("div");
+
+
+//  Adiciona à div anteriormente criada o seguinte texto: Isto é apenas para um exercício;
+//  Adiciona ao fim da div anteriormente criada o seguinte texto: muito difícil;
+//  Adiciona à div criada um atributo chamado aria-label com o valor teste-teste;
+
+
+
+
+
+
+    </script>
+</body>
+</html>

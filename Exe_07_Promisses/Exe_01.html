@@ -88,25 +88,29 @@ reject(e); }
 }); */
 
 // EXERCICIO ASYNC AWAIT
+const getNome = (nome) => {
+  const promiseNomes = new Promise((resolve, reject) => {
+    if (nome === "javascript") {
+      reject("Javascript é top");
+    } else {
+      resolve(`Nome: ${nome}`);
+    }
+  });
 
-asyncNome("José");
-asyncNome("javascript")
+  return promiseNomes;
+};
 
+const asyncNome = async (nome) => {
+  try {
+    const result = await getNome(nome);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
- const José = new Promise ((resolve, reject) => {
-
-  if nome = "José"
-  
-  { resolve ("é verdade"); }
-  
-  else {
-
-  if nome = "javacript"
-
-  { reject ("é mentira");
-
-});
-
+asyncNome("Vitor");
+asyncNome("javascript");
 
  </script>
     

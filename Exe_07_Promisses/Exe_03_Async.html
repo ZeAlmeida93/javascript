@@ -10,7 +10,29 @@
 
 
 
+const getNome = (nome) => {
+  const promiseNomes = new Promise((resolve, reject) => {
+    if (nome === "javascript") {
+      reject("Javascript é top");
+    } else {
+      resolve(`Nome: ${nome}`);
+    }
+  });
 
+  return promiseNomes;
+};
+
+const asyncNome = async (nome) => {
+  try {
+    const result = await getNome(nome);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+asyncNome("Vitor");
+asyncNome("javascript");
 
 
 

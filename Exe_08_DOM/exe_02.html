@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Elementos com JS</title>
+</head>
+<body>
+
+<div></div>
+
+    <script>
+
+
+
+// CRIAR ELEMENTOS - Cria um ficheiro html;
+//  Cria uma tag script para o código js;
+//  Cria uma div e adiciona ao body.
+        
+
+/*
+const conteudo = document.createTextNode("Esta frase está a ser criada dinamicamente");
+document.body.appendChild(conteudo); */
+
+
+const TheDiv = document.createElement("div");
+document.body.appendChild(TheDiv);
+
+TheDiv.prepend("Isto é apenas um exercício!");
+TheDiv.append("Muito Dificil!");
+
+TheDiv.setAttribute("aria-label", "teste-teste");
+
+    </script>
+</body>
+</html>                     
