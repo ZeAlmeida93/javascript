@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Decisões</title>
+</head>
+<body>
+
+    <script>
+
+// Estruturas de Decisão
+
+// Determinar Idade
+
+let age = 70
+
+if (age < 18) {
+console.log ("Menor de idade");
+} else if (age >= 18 && age <65) {
+console.log ("Adulto");
+} else if (age > 65 && age <110) {
+    console.log("Idoso");
+} else {console.log("Auf Wiedersehen");
+}
+
+
+// Determinar Temperatura
+
+const MuitoFrioMensagem = ("Está Muito Frio")
+const FrioMensagem = ("Está Frio")
+const AmenoMensagem = ("Está Ameno")
+const QuenteMensagem = ("Está Quente")
+
+function RoomTemperature() {
+
+if (temperature < 0) {return FrioMensagem;} 
+else if (temperature >= 0 && temperature < 20)  { return FrioMensagem; }
+else if (temperature >= 20 && temperature < 30)  { return AmenoMensagem; }
+else if (temperature >= 30) {return QuenteMensagem; }
+
+}
+
+let temperature = parseInt(prompt("Define Temperature:"));
+console.log(RoomTemperature(temperature));
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
