@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Eventos</title>
+</head>
+<body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+
+
+    <script>
+        // Que é isto?
+/*
+       const buttons = document.getElementsByTagName('button');
+      
+
+    buttons.addEventListener("mouseover" , function mouseover () {console.log('Mouseover!')});
+    buttons.addEventListener("mouseout" , function mouseout () {console.log('Mouseover!')});
+
+
+    const botao = document.getElementsByTagName('button')[0];
+
+
+setTimeout.setAttribute("id") 2000;  */
+
+// Resolução
+//  Podemos selecionar a partir do getElementsbyTagName ou pelo Query Selector
+const buttons = document.getElementsByTagName("button");
+const botoes = document.querySelectorAll("button");
+
+// EVENT STARTER
+
+button[0].onmouseover = () => console.log ("mouseover");
+button[1].onmouseout = () => console.log ("mouseout");
+
+// EVENT LISTNER
+
+button[0].addEventListener("mouseout", () => console.log("mouseout"));
+button[1].addEventListener("mousover", () => console.log("mousover"));
+
+  
+buttons.forEach(
+  (button) => (button.onmouseover = () => console.log("mouseover"))
+);
+
+setTimeout(() => buttons[0].setAttribute("id", "teste"), 2000);
+
+
+    </script>
+</body>
+</html>
