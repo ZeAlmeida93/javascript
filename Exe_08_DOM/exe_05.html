@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe_05_Manipulação da Dom</title>
+</head>
+<body>
+
+    <div id="test-div"></div>
+
+    
+<script>
+let teste = document.getElementById('test-div');
+
+
+teste.innerHTML = `
+<ul>
+<li>Exemplo 01</li>
+<li>Exemplo02</li> </ul>
+<p>isto é uma div</p> `;
+
+/*teste.appendChild('<li>Que é isto?</li>');
+teste.insertAdjacentHTML("beforeend", '<li>Isto é a nova li</li>'); */
+
+let newInsert = document.querySelector('li');
+let removerElemento = document.querySelector ('p');
+
+newInsert.insertAdjacentHTML("afterend", '<li>Isto é a nova li</li>');
+teste.removeChild(removerElemento);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
