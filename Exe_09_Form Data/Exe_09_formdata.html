@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data </title>
+    <style>
+
+.flex {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: start;
+    align-content: flex-start;
+    align-self: flex-start;
+}
+
+.message-box {
+
+width: 100%;
+height: 150px;
+
+}
+    </style>
+</head>
+<body>
+
+<form id="myForm" class="flex">
+
+<input type="Nome" placeholder="Nome">
+<input type="Email" placeholder="Email">
+<input class="message-box" type="Mensagem" placeholder="Introduza aqui a sua mensagem">
+<button type="submit">Submeta a sua Resposta</button>
+
+
+
+    <script>
+
+
+    document.getElementById("myForm"); 
+
+myForm.addEventListener('submit', function(event)  
+
+{ event.preventDefault();
+const theData = new FormData(myForm);
+const Nome = theData.get("Nome");
+const Email = theData.get("Email");
+const Mensagem = theData.get("Mensagem");
+
+console.log(`${Nome} , ${Email} , ${Mensagem}`);
+
+});
+
+
+    </script>
+    
+</body>
+</html>
