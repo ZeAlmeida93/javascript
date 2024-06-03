@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHTTPREQUEST AJAX</title>
+</head>
+<body>
+    <script>
+
+let ApiCall = new XMLHttpRequest();
+ApiCall.open ('GET' , 'https://dog.ceo/api/breeds/list/all' , true );
+ApiCall.send();
+ApiCall.responseType = "json";
+
+
+//   ApiCall.addEventListener("load" , () => console.log(ApiCall.response.message));
+
+ApiCall.addEventListener("load" , () => {
+const dogs = ApiCall.response.message;
+
+dogs.array.forEach(dog => {
+    console.log(dog);
+});
+});
+
+    </script>
+    
+</body>
+</html>
