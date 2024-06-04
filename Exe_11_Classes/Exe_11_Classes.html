@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribuição de Classes</title>
+</head>
+
+<body>
+    <script>
+
+class Carro {
+  constructor(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+  }
+
+  display() {
+    return `Este é um ${this.marca} ${this.modelo}`;
+  }
+}
+
+const nissan = new Carro("Nissan", "Micra");
+const ford = new Carro("Ford", "Focus");
+
+console.log(nissan.display());
+console.log(ford.display());
+
+class Suv extends Carro {
+  constructor(marca, modelo, ano) {
+    super(marca, modelo);
+    this.ano = ano;
+  }
+
+  getAno() {
+    return this.ano;
+  }
+}
+
+const toyota = new Suv("Toyota", "XRC", 2024);
+toyota.display();
+toyota.getAno();
+
+
+
+    </script>
+</body>
+
+</html>
