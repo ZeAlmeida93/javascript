@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Request Animes</title>
+    <title>Top Animes</title>
 </head>
 <body>
+  
+
     <script>
-
-
-
-const RequestAnime = new XMLHttpRequest();
-RequestAnime.open ('GET' , 'https://api.jikan.moe/v4/top/anime' );
-
-RequestAnime.responseType = "json";
-RequestAnime.send();
-
-
-RequestAnime.onload = () => {
-console.log(RequestAnime.response.data);
-}
-
- const YearofAnimes = animes.filter(anime => {
-                    const animeYear = new Date(anime.start_date).getFullYear();
-                    return animeYear == year;
-         
-
-
-
-
-
-
-//  Solução Vitor
-
-const loadAnimesFiltered = (yearParam) => {
+   const loadAnimesFiltered = (yearParam) => {
   const promise = new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();
     request.open("GET", "https://api.jikan.moe/v4/top/anime");
@@ -65,10 +41,6 @@ const findAnimeByYear = async (year) => {
     response.map((animeItem) => console.log(animeItem.title));
   }
 };
-
-
-
     </script>
-    
 </body>
 </html>
