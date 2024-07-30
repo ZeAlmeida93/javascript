@@ -14,6 +14,7 @@ let cart = [];
         // Function to display products on the page
         function displayProducts(products) {
             const productGrid = document.getElementById('productGrid');
+            
             products.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'product';
