@@ -2,7 +2,7 @@ const product01 = { id: 1, name: 'Leather boots', price: 100 };
 const product02 = { id: 2, name: 'Knitted Sweater', price: 200 };
 const product03 = { id: 3, name: 'Merino Wool Scarf', price: 300 };
 
-
+// Product 
 
 class Ecommerce {
     constructor() {
@@ -65,6 +65,11 @@ console.log(ecommerce.getAllProducts())
 
 console.log(ecommerce.getProductById(3))
 
+console.log(ecommerce.getProductsByPrice(200,400))
+
+
+addProductToCart(ecommerce.product02);
+console.log(getCart())
 
 
 
