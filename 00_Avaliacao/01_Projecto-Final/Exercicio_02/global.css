@@ -10,12 +10,13 @@ h1 {
   /*text-align: center; */
   margin-top: 20px;
   margin-left: 20px;
+  font-size: clamp(1rem, 0.8248rem + 0.7477vw, 1.75rem);
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 1.15rem;
   padding: 20px;
   justify-content: center;
   max-width: 1000px;

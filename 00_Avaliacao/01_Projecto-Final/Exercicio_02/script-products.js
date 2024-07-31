@@ -14,7 +14,7 @@ let cart = [];
         // Function to display products on the page
         function displayProducts(products) {
             const productGrid = document.getElementById('productGrid');
-            
+
             products.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'product';
@@ -38,18 +38,8 @@ let cart = [];
             });
         }
 
-        // Function to add a product to the cart
-        function addToCart(product) {
-            const existingProduct = cart.find(item => item.product.id === product.id);
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({ product, quantity: 1 });
-            }
-            renderCart();
-        }
 
-        // Function to render the cart
+        //Declare Function renderCart() first in order to avoid hoisting
         function renderCart() {
             const cartList = document.getElementById('cartList');
             cartList.innerHTML = '';
@@ -63,6 +53,19 @@ let cart = [];
                 cartList.appendChild(listItem);
             });
         }
+
+        // Function to add a product to the cart
+        function addToCart(product) {
+            const existingProduct = cart.find(item => item.product.id === product.id);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ product, quantity: 1 });
+            }
+            renderCart();
+        }
+
+       
 
         // Function to remove a product from the cart
         function removeFromCart(productId) {
